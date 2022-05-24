@@ -594,7 +594,7 @@ img {
   border: 1px solid #afb1b8;
   border-radius: 4px;
 
-  transition: color var(--fast-anim), background-color var(--fast-anim);
+  transition: border-color var(--fast-anim);
 }
 
 .clients-link:hover,
@@ -604,6 +604,7 @@ img {
 
 .clients-icon {
   fill: currentColor;
+  transition: fill var(--fast-anim);
 }
 
 .clients-link:hover .clients-icon,
