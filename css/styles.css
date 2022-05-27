@@ -65,7 +65,7 @@ img {
   text-decoration: none;
 }
 
-.hiden-header {
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -387,11 +387,12 @@ img {
   color: var(--header-text-color);
 }
 
-.form {
+.form-field,
+.form-field-policy {
+  display: block;
 }
 
 .form-field {
-  display: block;
   position: relative;
   margin-bottom: 10px;
 }
@@ -466,7 +467,95 @@ img {
   fill: var(--accent-color);
 }
 
+.form-field-policy {
+  margin-bottom: 30px;
+}
+
+.form-text-policy {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.link-policy {
+  color: var(--accent-color);
+}
+
+.submit-btn {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 0px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: var(--hero-text-color);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  transition: background-color var(--fast-anim);
+
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  background-color: #188ce8;
+}
+
+/* *Custom Checkbox */
+
+.custom-checkbox {
+  width: 16px;
+  height: 15px;
+  margin-right: 8px;
+  margin-left: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 2px;
+  border: 2px solid var(--header-text-color);
+
+  transition: border-color var(--fast-anim), background-color var(--fast-anim);
+}
+
+.custom-checkbox-icon {
+  opacity: 0;
+
+  transition: opacity var(--fast-anim);
+}
+
+.form-field-policy {
+  display: flex;
+  align-items: center;
+}
+
+.custom-checkbox:hover,
+.custom-checkbox:focus {
+  border-color: var(--accent-color);
+}
+
+.checkbox:checked + .custom-checkbox .custom-checkbox-icon {
+  opacity: 1;
+}
+
+.checkbox:checked + .custom-checkbox {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
 /* *Feature* */
+
 .feature-container {
   display: flex;
   align-items: center;
@@ -866,6 +955,7 @@ img {
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  outline: transparent;
   border-radius: 4px;
   cursor: pointer;
 
